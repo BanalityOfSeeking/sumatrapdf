@@ -268,7 +268,7 @@ static bool PrintToDevice(const PrintData &pd, ProgressUpdateUI *progressUI = nu
             // center the page on the physical paper (except for PrintScaleNone
             // where the page starts at the very top left of the physical paper so
             // that printing forms/labels of varying size remains reliably possible)
-            PointI offset(-printable.x, -printable.y);
+            PointI offset(printable.x, printable.y);
 
             if (pd.advData.scale != PrintScaleNone) {
                 // make sure to fit all content into the printable area when scaling
